@@ -1,105 +1,18 @@
-/* =================================================================== 
- * Luther Main Stylesheet
- * Template Ver. 1.0.0
- * 02-15-2021
- * ------------------------------------------------------------------
- *
- * TOC:
- *
- * # SETTINGS
- *      ## fonts 
- *      ## colors
- *      ## spacing and typescale
- *      ## grid variables
- * # NORMALIZE
- * # BASE SETUP
- * # GRID
- *      ## large screen devices 
- *      ## medium screen devices 
- *      ## tablet devices 
- *      ## mobile devices 
- *      ## small screen devices 
- *      ## additional column stackpoints 
- * # UTILITY CLASSES
- * # TYPOGRAPHY 
- *      ## base type styles
- *      ## additional typography & helper classes
- *      ## lists
- *      ## spacing
- * # PRELOADER
- * # FORM
- *      ## style placeholder text
- *      ## change autocomplete styles in Chrome
- * # BUTTONS
- * # TABLE
- * # COMPONENTS
- *      ## pagination
- *      ## alert box 
- *      ## skillbars 
- *      ## stats tabs
- * # PROJECT-WIDE SHARED STYLES
- *      ## media classes
- *      ## theme-specific typography classes
- *      ## MailtoUI style overrides
- * # PAGE WRAP
- *      ## circles
- * # SITE HEADER
- *      ## main navigation
- *      ## mobile menu toggle
- * # INTRO
- *      ## intro social
- *      ## intro scrolldown
- * # ABOUT
- *      ## about info
- *      ## about expertise
- *      ## about timelines
- * # WORKS
- *      ## works portfolio
- *      ## modal popup
- *      ## testimonials
- *      ## testimonial slider 
- * # CONTACT
- * # FOOTER
- *      ## copyright
- *      ## go top
- *
- * ------------------------------------------------------------------ */
-
-
-/* ===================================================================
- * # SETTINGS
- *
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
- * ## fonts 
- * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
 :root {
 
     --font-1 : "Public Sans", sans-serif;
     --font-2 : "DM Serif Display", serif;
 
-    /* monospace
-    */
+    
     --font-mono : Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
-/* ------------------------------------------------------------------- 
- * ## colors
- * ------------------------------------------------------------------- */
 :root {
-
-    /* color-1(#eabe7c)
-     * color-2(#23967f)
-     */
+    
     --color-1 : hsla(36, 72%, 70%, 1);
     --color-2 : hsla(168, 62%, 36%, 1);
 
-    /* theme color variations
-     */
     --color-1-lighter : hsla(36, 72%, 90%, 1);
     --color-1-light   : hsla(36, 72%, 80%, 1);
     --color-1-dark    : hsla(36, 72%, 60%, 1);
@@ -109,10 +22,6 @@
     --color-2-dark    : hsla(168, 62%, 26%, 1);
     --color-2-darker  : hsla(168, 62%, 16%, 1);
 
-    /* feedback colors
-     * color-error(#ffd1d2), color-success(#c8e675), 
-     * color-info(#d7ecfb), color-notice(#fff099)
-     */
     --color-error           : hsla(359, 100%, 91%, 1);
     --color-success         : hsla(76, 69%, 68%, 1);
     --color-info            : hsla(205, 82%, 91%, 1);
@@ -122,11 +31,6 @@
     --color-info-content    : hsla(205, 32%, 31%, 1);
     --color-notice-content  : hsla(51, 30%, 30%, 1);
 
-    /* shades 
-     * generated using 
-     * Tint & Shade Generator 
-     * (https://maketintsandshades.com/)
-     */
     --color-black   : #000000;
     --color-gray-19 : #020202;
     --color-gray-18 : #040404;
@@ -149,15 +53,11 @@
     --color-gray-1  : #e8e8e8;
     --color-white   : #ffffff;
 
-    /* text
-     */
     --color-text        : var(--color-gray-4);
     --color-text-dark   : var(--color-white);
     --color-text-light  : var(--color-gray-7);
     --color-placeholder : var(--color-gray-7);
 
-    /* buttons
-     */
     --color-btn                    : var(--color-gray-9);
     --color-btn-text               : var(--color-1);
     --color-btn-hover              : var(--color-white);
@@ -171,35 +71,21 @@
     --color-btn-stroke-hover       : var(--color-white);
     --color-btn-stroke-hover-text  : var(--color-black);
 
-    /* preloader
-     */
     --color-preloader-bg : var(--color-gray-10);
     --color-loader       : white;
     --color-loader-light : rgba(255, 255, 255, 0.1);
 
-    /* others
-     */
     --color-body    : var(--color-gray-10);
     --color-border  : rgba(255, 255, 255, .05);
     --border-radius : 3px;
 }
 
-/* ------------------------------------------------------------------- 
- * ## spacing and typescale
- * ------------------------------------------------------------------- */
 :root {
-
-    /* spacing
-     * base font size: 19px 
-     * vertical space unit : 32px
-     */
     --base-size      : 62.5%;
     --multiplier     : 1;
     --base-font-size : calc(1.9rem * var(--multiplier));
     --space          : calc(3.2rem * var(--multiplier));
 
-    /* vertical spacing 
-     */
     --vspace-0_125 : calc(0.125 * var(--space));
     --vspace-0_25  : calc(0.25 * var(--space));
     --vspace-0_375 : calc(0.375 * var(--space));
@@ -219,24 +105,6 @@
     --vspace-4_5   : calc(4.5 * var(--space));
     --vspace-5     : calc(5 * var(--space));
 
-    /* type scale
-     * ratio 1:2 | base: 19px
-     * -------------------------------------------------------
-     *
-     * --text-display-3 = (81.70px)
-     * --text-display-2 = (68.08px)
-     * --text-display-1 = (56.73px)
-     * --text-xxxl      = (47.28px)
-     * --text-xxl       = (39.40px)
-     * --text-xl        = (32.83px)
-     * --text-lg        = (27.36px)
-     * --text-md        = (22.80px)
-     * --text-size      = (19.00px) BASE
-     * --text-sm        = (15.83px)
-     * --text-xs        = (13.19px)
-     *
-     * ---------------------------------------------------------
-     */
     --text-scale-ratio : 1.2;
     --text-size        : var(--base-font-size);
     --text-xs          : calc((var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
@@ -250,27 +118,18 @@
     --text-display-2   : calc(var(--text-display-1) * var(--text-scale-ratio));
     --text-display-3   : calc(var(--text-display-2) * var(--text-scale-ratio));
 
-    /* default button height
-     */
+   
     --vspace-btn : var(--vspace-2);
 }
 
-/* on mobile devices below 600px, change the value of '--multiplier' 
- * to adjust the values of base font size and vertical space unit.
- */
 @media screen and (max-width: 600px) {
     :root {
         --multiplier : .875;
     }
 }
 
-/* ------------------------------------------------------------------- 
- * ## grid variables
- * ------------------------------------------------------------------- */
 :root {
 
-    /* widths for rows and containers
-     */
     --width-full     : 100%;
     --width-max      : 1200px;
     --width-wide     : 1400px;
@@ -280,21 +139,15 @@
     --width-narrower : 800px;
     --width-grid-max : var(--width-max);
 
-    /* gutter
-     */
     --gutter : 2rem;
 }
 
-/* on medium screen devices
- */
 @media screen and (max-width: 1200px) {
     :root {
         --gutter : 1.6rem;
     }
 }
 
-/* on mobile devices
- */
 @media screen and (max-width: 600px) {
     :root {
         --gutter : 1rem;
@@ -495,13 +348,6 @@ template {
 }
 
 
-
-/* ===================================================================
- * # BASE SETUP
- *
- *
- * ------------------------------------------------------------------- */
-
 html {
     font-size  : var(--base-size);
     box-sizing : border-box;
@@ -565,26 +411,6 @@ textarea {
     appearance         : none;
 }
 
-
-
-/* ===================================================================
- * # GRID v4.0.0
- *
- *
- *   -----------------------------------------------------------------
- * - Grid breakpoints are based on MAXIMUM WIDTH media queries, 
- *   meaning they apply to that one breakpoint and ALL THOSE BELOW IT.
- * - Grid columns without a specified width will automatically layout 
- *   as equal width columns.
- *
- * - BLOCK GRID columns(columns inside BLOCK GRID containers) are 
- *   equally-sized columns define at parent/row level. 
- *   A BLOCK GRID container's class attribute value begins with "block-".
- *
- * ------------------------------------------------------------------- */
-
-/* row 
- */
 .row {
     width     : 92%;
     max-width : var(--width-grid-max);
@@ -600,8 +426,6 @@ textarea {
     margin-right : calc(var(--gutter) * -1);
 }
 
-/* column
- */
 .column {
     display : block;
     flex    : 1 1 0%;
@@ -613,8 +437,6 @@ textarea {
     padding : 0;
 }
 
-/* row utility classes
- */
 .row.row-wrap {
     flex-wrap : wrap;
 }
@@ -655,9 +477,6 @@ textarea {
     justify-content : center;
 }
 
-/* --------------------------------------------------------------------
- * ## large screen devices 
- * -------------------------------------------------------------------- */
 .lg-1 {
     flex  : none;
     width : 8.33333%;
@@ -753,9 +572,6 @@ textarea {
     width : 100%;
 }
 
-/* --------------------------------------------------------------------
- * ## medium screen devices 
- * -------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
     .md-1 {
         flex  : none;
@@ -857,9 +673,6 @@ textarea {
     }
 }
 
-/* --------------------------------------------------------------------
- * ## tablet devices 
- * -------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
     .tab-1 {
         flex  : none;
@@ -961,9 +774,6 @@ textarea {
     }
 }
 
-/* --------------------------------------------------------------------
- * ## mobile devices 
- * -------------------------------------------------------------------- */
 @media screen and (max-width: 600px) {
     .row {
         width         : 100%;
@@ -1076,12 +886,6 @@ textarea {
     }
 }
 
-/* --------------------------------------------------------------------
- * ## small screen devices 
- * --------------------------------------------------------------------*/
-
-/* stack columns on small screen devices
- */
 @media screen and (max-width: 400px) {
     .row .row {
         margin-left  : 0;
@@ -1102,9 +906,6 @@ textarea {
     }
 }
 
-/* --------------------------------------------------------------------
- * ## additional column stackpoints 
- * -------------------------------------------------------------------- */
 @media screen and (max-width: 1000px) {
 
     .stack-on-1000,
@@ -1139,15 +940,6 @@ textarea {
 }
 
 
-
-/* ===================================================================
- * # UTILITY CLASSES
- *
- *
- * ------------------------------------------------------------------- */
-
-/* flex item alignment classes
- */
 .u-flexitem-center {
     margin     : auto;
     align-self : center;
@@ -1188,8 +980,7 @@ textarea {
     align-self : flex-end;
 }
 
-/* misc helper classes
- */
+
 .u-clearfix:after {
     content : "";
     display : table;
@@ -1246,32 +1037,6 @@ textarea {
 }
 
 
-
-/* ===================================================================
- * # TYPOGRAPHY 
- *
- *
- * ------------------------------------------------------------------- 
- * type scale - ratio 1:2 | base: 19px
- * -------------------------------------------------------------------
- *
- * --text-display-3 = (81.70px)
- * --text-display-2 = (68.08px)
- * --text-display-1 = (56.73px)
- * --text-xxxl      = (47.28px)
- * --text-xxl       = (39.40px)
- * --text-xl        = (32.83px)
- * --text-lg        = (27.36px)
- * --text-md        = (22.80px)
- * --text-size      = (19.00px) BASE
- * --text-sm        = (15.83px)
- * --text-xs        = (13.19px)
- *
- * -------------------------------------------------------------------- */
-
-/* --------------------------------------------------------------------
- * ## base type styles
- * -------------------------------------------------------------------- */
 body {
     font-family : var(--font-1);
     font-size   : var(--base-font-size);
@@ -1280,8 +1045,6 @@ body {
     color       : var(--color-text);
 }
 
-/* links
- */
 a {
     color      : var(--color-1);
     transition : all 0.3s ease-in-out;
@@ -1298,8 +1061,6 @@ a:active {
     outline : 0;
 }
 
-/* headings
- */
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family            : var(--font-2);
@@ -1365,9 +1126,6 @@ h6, .h6 {
     letter-spacing : .2rem;
 }
 
-/* emphasis, italic,
- * strong, bold and small text
- */
 em,
 i,
 strong,
@@ -1392,8 +1150,6 @@ small {
     line-height : var(--vspace-0_5);
 }
 
-/* blockquotes
- */
 blockquote {
     margin      : 0 0 var(--vspace-1) 0;
     padding     : var(--vspace-1) var(--vspace-1_5);
@@ -1437,8 +1193,6 @@ blockquote cite a:visited {
     border : none;
 }
 
-/* figures
- */
 figure img,
 p img {
     margin         : 0;
@@ -1462,8 +1216,6 @@ figcaption {
     margin-bottom : 0;
 }
 
-/* preformatted, code
- */
 var,
 kbd,
 samp,
@@ -1499,9 +1251,6 @@ pre>code {
     border      : none;
 }
 
-/* deleted text, abbreviation,
- * & mark text
- */
 del {
     text-decoration : line-through;
 }
@@ -1526,8 +1275,6 @@ mark {
     color      : var(--color-black);
 }
 
-/* horizontal rule
- */
 hr {
     border       : solid var(--color-border);
     border-width : .1rem 0 0;
@@ -1548,9 +1295,6 @@ hr.fancy::before {
     letter-spacing : .3em;
 }
 
-/* --------------------------------------------------------------------
- * ## additional typography & helper classes
- * -------------------------------------------------------------------- */
 .lead,
 .attention-getter {
     font-family : var(--font-1);
@@ -1619,9 +1363,6 @@ hr.fancy::before {
     text-align : right;
 }
 
-/* --------------------------------------------------------------------
- * ## lists
- * -------------------------------------------------------------------- */
 ol {
     list-style : decimal;
 }
@@ -1679,8 +1420,6 @@ dd {
     margin : 0 0 0 2rem;
 }
 
-/* definition list line style 
- */
 .lining dt,
 .lining dd {
     display : inline;
@@ -1706,8 +1445,6 @@ dd {
     margin-left : -0.2em;
 }
 
-/* definition list dictionary style 
- */
 .dictionary-style dt {
     display       : inline;
     counter-reset : definitions;
@@ -1727,9 +1464,6 @@ dd {
     content : counter(definitions, decimal) ". ";
 }
 
-/* --------------------------------------------------------------------
- * ## spacing
- * -------------------------------------------------------------------- */
 fieldset,
 button,
 .btn {
@@ -1755,20 +1489,6 @@ img,
     margin-bottom : var(--vspace-1);
 }
 
-
-
-/* ===================================================================
- * # PRELOADER
- * 
- * 
- * -------------------------------------------------------------------
- * - markup:
- *
- * <div id="preloader">
- *    <div id="loader"></div>
- * </div>
- *
- * ------------------------------------------------------------------- */
 
 #preloader {
     position        : fixed;
@@ -1820,14 +1540,6 @@ img,
         opacity   : 0;
     }
 }
-
-
-
-/* ===================================================================
- * # FORM
- *
- *
- * ------------------------------------------------------------------- */
 
 fieldset {
     border : none;
@@ -1950,9 +1662,6 @@ label>input[type="radio"] {
     top      : 2px;
 }
 
-/* ------------------------------------------------------------------- 
- * ## style placeholder text
- * ------------------------------------------------------------------- */
 ::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color : var(--color-placeholder);
@@ -1985,9 +1694,6 @@ label>input[type="radio"] {
     color : var(--color-placeholder);
 }
 
-/* ------------------------------------------------------------------- 
- * ## change autocomplete styles in Chrome
- * ------------------------------------------------------------------- */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -2003,11 +1709,7 @@ select:-webkit-autofill:focus {
 
 
 
-/* ===================================================================
- * # BUTTONS
- *
- *
- * ------------------------------------------------------------------- */
+
 
 .btn,
 button,
@@ -2053,8 +1755,7 @@ input[type="button"]:hover {
     outline          : 0;
 }
 
-/* button primary
- */
+
 .btn.btn--primary,
 button.btn--primary,
 input[type="submit"].btn--primary,
@@ -2080,8 +1781,7 @@ input[type="button"].btn--primary:hover {
     color        : var(--color-btn-primary-hover-text);
 }
 
-/* button modifiers
- */
+
 .btn.u-fullwidth,
 button.u-fullwidth {
     width        : 100%;
@@ -2128,11 +1828,7 @@ button.btn--pill {
 
 
 
-/* ===================================================================
- * # TABLE
- *
- *
- * ------------------------------------------------------------------- */
+
 
 table {
     border-width    : 0;
@@ -2173,15 +1869,7 @@ td:last-child {
 
 
 
-/* ===================================================================
- * # COMPONENTS
- *
- *
- * ------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------
- * ## pagination
- * ------------------------------------------------------------------- */
 .pgn {
     --pgn-num-height : calc(var(--vspace-1) + .4rem);
     margin           : var(--vspace-1) auto;
@@ -2306,19 +1994,14 @@ td:last-child {
     background-color : transparent;
 }
 
-/* ------------------------------------------------------------------- 
- * responsive:
- * pagination
- * ------------------------------------------------------------------- */
+
 @media screen and (max-width: 600px) {
     .pgn ul {
         padding : 0 5.2rem;
     }
 }
 
-/* ------------------------------------------------------------------- 
- * ## alert box 
- * ------------------------------------------------------------------- */
+
 .alert-box {
     padding       : var(--vspace-0_75) 4rem var(--vspace-0_75) 3.2rem;
     margin-bottom : var(--vspace-1);
@@ -2407,9 +2090,7 @@ td:last-child {
     transition : all .5s;
 }
 
-/* ------------------------------------------------------------------- 
- * ## skillbars 
- * ------------------------------------------------------------------- */
+
 .skill-bars {
     list-style : none;
     margin     : var(--vspace-2) 0 var(--vspace-1);
@@ -2549,9 +2230,7 @@ td:last-child {
     width : 100%;
 }
 
-/* --------------------------------------------------------------------
- * ## stats tabs
- * -------------------------------------------------------------------- */
+
 .stats-tabs {
     padding : 0;
     margin  : var(--vspace-1) 0;
@@ -2597,11 +2276,7 @@ td:last-child {
 
 
 
-/* ===================================================================
- * # PROJECT-WIDE SHARED STYLES
- *
- *
- * ------------------------------------------------------------------- */
+
 
 .wide {
     max-width : var(--width-wide);
@@ -2619,12 +2294,6 @@ td:last-child {
     opacity : 0;
 }
 
-/* ------------------------------------------------------------------- 
- * ## media classes
- * ------------------------------------------------------------------- */
-
-/* floated image
- */
 
 img.u-pull-right {
     margin : var(--vspace-0_5) 0 var(--vspace-0_5) var(--vspace-0_875);
@@ -2634,8 +2303,7 @@ img.u-pull-left {
     margin : var(--vspace-0_5) var(--vspace-0_875) var(--vspace-0_5) 0;
 }
 
-/* responsive video container
- */
+
 .video-container {
     position       : relative;
     padding-bottom : 56.25%;
@@ -2654,9 +2322,7 @@ img.u-pull-left {
     height   : 100%;
 }
 
-/* ------------------------------------------------------------------- 
- * ## theme-specific typography classes
- * ------------------------------------------------------------------- */
+
 .text-pretitle {
     font-family    : var(--font-1);
     font-size      : var(--text-sm);
@@ -2694,9 +2360,7 @@ img.u-pull-left {
     margin-top  : 0;
 }
 
-/* ------------------------------------------------------------------- 
- * ## MailtoUI style overrides
- * ------------------------------------------------------------------- */
+
 .mailtoui-modal {
     --mailtoui-modal-box-shadow         : 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08);
     --mailtoui-modal-head-bgcolor       : var(--color-gray-18);
@@ -2819,10 +2483,7 @@ img.u-pull-left {
     color       : white;
 }
 
-/* ------------------------------------------------------------------- 
- * responsive:
- * project-wide shared styles
- * ------------------------------------------------------------------- */
+
 @media screen and (max-width: 800px) {
     .text-pretitle.with-line {
         padding-left : 3rem;
@@ -2837,11 +2498,7 @@ img.u-pull-left {
 
 
 
-/* ===================================================================
- * # PAGE WRAP
- *
- *
- * ------------------------------------------------------------------- */
+
 
 .s-pagewrap {
     --circle-width  : 70vw;
@@ -2853,9 +2510,7 @@ img.u-pull-left {
     position        : relative;
 }
 
-/* --------------------------------------------------------------------
- * ## circles
- * -------------------------------------------------------------------- */
+
 .s-pagewrap .circles,
 .s-pagewrap .circles span {
     position : absolute;
@@ -2907,10 +2562,7 @@ img.u-pull-left {
     visibility : hidden;
 }
 
-/* ------------------------------------------------------------------- 
- * responsive:
- * page-wrap
- * ------------------------------------------------------------------- */
+
 @media screen and (max-width: 800px) {
     .s-pagewrap .circles {
         top : calc(var(--header-height) + 5vh);
@@ -2919,11 +2571,7 @@ img.u-pull-left {
 
 
 
-/* ===================================================================
- * # SITE HEADER
- *
- *
- * ------------------------------------------------------------------- */
+
 
 .s-header {
     --box-shadow : 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 2px rgba(0, 0, 0, 0.06), 0 4px 4px rgba(0, 0, 0, 0.06), 0 8px 8px rgba(0, 0, 0, 0.06);
@@ -2943,9 +2591,7 @@ img.u-pull-left {
     border-bottom    : 1px solid var(--color-border);
 }
 
-/* --------------------------------------------------------------------
- * ## main navigation
- * -------------------------------------------------------------------- */
+
 .mobile-home-link a,
 .main-nav a {
     display             : block;
@@ -3009,9 +2655,7 @@ img.u-pull-left {
     border-right : none;
 }
 
-/* --------------------------------------------------------------------
- * ## mobile menu toggle
- * -------------------------------------------------------------------- */
+
 .mobile-menu-toggle {
     display  : block;
     width    : var(--header-height);
@@ -3060,8 +2704,7 @@ img.u-pull-left {
     transition-property : bottom, transform;
 }
 
-/* is clicked 
- */
+
 .mobile-menu-toggle.is-clicked span {
     background-color : rgba(255, 255, 255, 0);
 }
@@ -3082,10 +2725,7 @@ img.u-pull-left {
     transform : rotate(-45deg);
 }
 
-/* ------------------------------------------------------------------- 
- * responsive:
- * site-header
- * ------------------------------------------------------------------- */
+
 @media screen and (max-width: 1000px) {
     .main-nav-wrap {
         width : 100%;
@@ -3185,11 +2825,7 @@ img.u-pull-left {
 
 
 
-/* ===================================================================
- * # INTRO
- *
- *
- * ------------------------------------------------------------------- */
+
 
 .s-intro {
     --gutter               : 6rem;
