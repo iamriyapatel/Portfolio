@@ -132,6 +132,7 @@
     }; // end ssMobileMenu
 
 
+<<<<<<< HEAD
    /* Highlight active menu link on pagescroll
     * ------------------------------------------------------ */
     const ssScrollSpy = function() {
@@ -168,6 +169,41 @@
         }
 
     }; // end ssScrollSpy
+=======
+   /* Highlight active menu link on page scroll
+ * ------------------------------------------------------ */
+const ssScrollSpy = function() {
+    const sections = document.querySelectorAll(".target-section");
+    const navLinks = document.querySelectorAll(".main-nav a");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlight);
+
+    function navHighlight() {
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Loop through sections to get height (including padding and border),
+        // top and ID values for each
+        sections.forEach(function(current) {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50; // Adjust this value if needed
+            const sectionId = current.getAttribute("id");
+
+            // If our current scroll position enters the space where current section
+            // on screen is, add .current class to parent element(li) of the corresponding
+            // navigation link, else remove it.
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                // Add 'current' class to the corresponding nav link
+                document.querySelector(".main-nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
+            } else {
+                // Remove 'current' class from the corresponding nav link
+                document.querySelector(".main-nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
+            }
+        });
+    }
+}; // end ssScrollSpy
+>>>>>>> 40a54be (Normalize line endings)
 
 
    /* Animate elements if in viewport

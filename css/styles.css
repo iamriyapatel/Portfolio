@@ -1827,9 +1827,6 @@ button.btn--pill {
 }
 
 
-
-
-
 table {
     border-width    : 0;
     width           : 100%;
@@ -1866,9 +1863,6 @@ td:last-child {
     overflow-x                 : auto;
     -webkit-overflow-scrolling : touch;
 }
-
-
-
 
 .pgn {
     --pgn-num-height : calc(var(--vspace-1) + .4rem);
@@ -2496,10 +2490,6 @@ img.u-pull-left {
     }
 }
 
-
-
-
-
 .s-pagewrap {
     --circle-width  : 70vw;
     --header-height : 6.4rem;
@@ -2568,9 +2558,6 @@ img.u-pull-left {
         top : calc(var(--header-height) + 5vh);
     }
 }
-
-
-
 
 
 .s-header {
@@ -2822,10 +2809,6 @@ img.u-pull-left {
         padding : 0;
     }
 }
-
-
-
-
 
 .s-intro {
     --gutter               : 6rem;
