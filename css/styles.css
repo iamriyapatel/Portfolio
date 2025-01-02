@@ -3284,6 +3284,7 @@ img.u-pull-left {
 }
 
 .folio-list__item-pic::before {
+<<<<<<< HEAD
     z-index          : 1;
     content          : "";
     display          : block;
@@ -3297,6 +3298,20 @@ img.u-pull-left {
     height           : 100%;
     opacity          : 0;
     visibility       : hidden;
+=======
+  z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+>>>>>>> 3b5ad1f (Update styles.css)
 }
 
 .folio-list__item-pic::after {
