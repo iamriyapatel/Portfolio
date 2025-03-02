@@ -1,1 +1,1 @@
-portfolio: https://iamriyapatel.github.io/
+portfolio: https://iamriyapatel.github.io/Portfolio/
